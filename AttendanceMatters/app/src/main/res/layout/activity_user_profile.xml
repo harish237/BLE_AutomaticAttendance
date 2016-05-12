@@ -1,0 +1,212 @@
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e7"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="Name"
+                android:layout_marginTop="30dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+
+                />
+
+            <EditText android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:background="#f3f3f3"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/name_input"
+                android:inputType="textPersonName"
+                android:hint="First Name Last Name"
+                android:textColor="#010101" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="SJSU ID"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+                />
+
+            <TextView android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:textColor="#010101"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/sjsuid"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="Email ID"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+                />
+
+            <EditText android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:background="#f3f3f3"
+                android:textColor="#010101"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/emailid_input"
+                android:inputType="textEmailAddress"
+                android:hint="xyz@sjsu.edu" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="Phone"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+                />
+
+            <EditText android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:background="#f3f3f3"
+                android:textColor="#010101"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/phoneno_input"
+                android:inputType="phone"
+                android:hint="10 Digit Mobile Number" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:text="Password"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+                />
+
+            <EditText android:layout_width="225dp"
+                android:layout_height="30dp"
+                android:background="#f3f3f3"
+                android:textColor="#000000"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/password_input"
+                android:inputType="text"
+                android:hint="To Change Type In"
+                android:textColorHint="#D32F2F"/>
+        </LinearLayout>
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8e8e7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:text="Receive Email Alert"
+                android:layout_marginTop="33dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000000"
+                android:gravity="left"
+                />
+
+            <RadioGroup
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioAlert"
+                android:layout_marginTop="30dp">
+                <RadioButton
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/yesAlertButton"
+                    android:checked="true"
+                    android:textColor="@color/abc_input_method_navigation_guard" />
+
+                <RadioButton
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/noAlertButton"
+                    android:checked="false"
+                    android:layout_marginTop="0dp"
+                    android:textColor="@color/abc_input_method_navigation_guard" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+
+        <Button android:layout_width="190dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="34dp"
+            android:text="Save"
+            android:textColor="#fff"
+            android:textSize="13dp"
+            android:background="#13b586"
+            android:id="@+id/save_button" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

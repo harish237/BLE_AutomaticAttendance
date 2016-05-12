@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default" style="max-width:30%;margin-left:auto; margin-right:auto;">
+            <div class="panel-body">
+                <legend>User Login</legend>
+                {% if form.errors %}
+                    <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+                {% if next %}
+                    {% if user.is_authenticated %}
+                        <p>Your account doesn't have access to this page. To proceed,
+                        please login with an account that has access.</p>
+                    {% else %}
+                        <p>Please login to see this page.</p>
+                    {% endif %}
+                {% endif %}
+                <form role="form" action="{% url 'django.contrib.auth.views.login' %}" method="post">{% csrf_token %}
+                <div class="form-group">
+                    <label for="addUser-username"><span class="glyphicon glyphicon-user"></span> Username </label>
+                    <input type="text" class="form-control" id="addUser-username" name="username" placeholder="" aria-required="true" />
+                </div>
+                <div class="form-group">
+                    <label for="addUser-password"><span class="glyphicon glyphicon-eye-open"></span> Password </label>
+                    <input type="password" class="form-control" id="addUser-password" name="password" placeholder="">
+                </div>
+                    <input type="hidden" id="addUser-redirect" name="next" value="{{ next }}">
+                    <button id="btnSubmit" type="submit" class="btn-info"> Submit </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

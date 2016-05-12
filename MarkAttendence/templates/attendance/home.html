@@ -1,0 +1,96 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Attendence Matters</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/jumbotron-narrow.css' %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="{% static 'js/ie8-responsive-file-warning.js' %}"></script><![endif]-->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="{% url 'pricing' %}">Pricing</a></li>
+                <li role="presentation"><a href="{% url 'login' %}">Sign In</a></li>
+            </ul>
+        </nav>
+        <img src="{% static 'img/SpartaNets-logo-sm.png' %}" alt="SpartaNets" heigth="30" width="150">
+      </div>
+
+      <div class="jumbotron">
+        <h1>SpartaNets </h1>
+        <p class="lead">SpartaNets provides the ability to obtaine advanced network functionalities through a cloud-based service. </p>
+        <p><a class="btn btn-lg btn-success" href="{% url 'sign_up' %}" role="button">Sign up today</a></p>
+      </div>
+
+      <div class="row marketing" align= "center">
+	<div class="col-lg-6">
+	  <img src="{% static 'img/firewall.png' %}" alt="Firewall" heigth="120" width="120" hspace = "50">
+
+        </div>
+        <div class="col-lg-6">
+          <h4>Firewall</h4>
+          <p>The firewall is in charge of scanning, filtering, validating, cleaning and auditing the data. It prevents unauthorized access to specific organizational resources.</p>
+        </div>
+
+
+	<div class="col-lg-6" align= "center">
+	  <img src="{% static 'img/proxy.jpg' %}" alt="Firewall" heigth="120" width="120" hspace = "50">
+
+        </div>
+        <div class="col-lg-6">
+          <h4>Proxy Server</h4>
+          <p>The Proxy Server is an intermediary fro requests from clients seeking resoruces from other servers. It allows accessing content on the internet with anonymity.</p>
+
+        </div>
+	<div class="col-lg-6" align= "center">
+	  <img src="{% static 'img/vpn.png' %}" alt="Firewall" heigth="120" width="120" hspace = "50">
+
+        </div>
+       <div class="col-lg-6">
+          <h4>Virtual Private Network</h4>
+          <p>The VPN creates a site-to-site tunneling. It encapsulates traffic from remote agents alloing them to access organizational resources in a secure way.</p>
+
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2016 SpartaNets, Inc.</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+  </body>
+</html>

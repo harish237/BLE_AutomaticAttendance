@@ -1,0 +1,62 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Elastic Login Form</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <!--Google Font - Work Sans-->
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+<div class="container">
+  <div class="profile">
+    <button class="profile__avatar" id="toggleProfile">
+     <img src="{% static 'login/img/spartaNets.png' %}" alt="Avatar" />
+    </button>
+    <div class="profile__form">
+      <div class="profile__fields">
+        <div class="field">
+
+
+
+            <form role="form" action="{% url 'django.contrib.auth.views.login' %}" method="post">{% csrf_token %}
+              <div class="form-group">
+                    <label for="addUser-username"><span class="glyphicon glyphicon-user"></span> Username </label>
+                    <input type="text" class="form-control" id="addUser-username" name="username" placeholder="" aria-required="true" />
+                </div>
+                <div class="form-group">
+                    <label for="addUser-password"><span class="glyphicon glyphicon-eye-open"></span> Password </label>
+                    <input type="password" class="form-control" id="addUser-password" name="password" placeholder="">
+                </div>
+                    <input type="hidden" name="user_id" value="{{ user.username }}">
+                    <input type="hidden" id="addUser-redirect" name="next" value="{{ next }}">
+                    <button id="btnSubmit" type="submit" class="btn-info"> Submit </button>
+
+          </form>
+
+
+        </div>
+      </div>
+     </div>
+  </div>
+</div>
+    
+        <script src="{% static 'login/js/index.js' %}"></script>
+
+    
+    
+    
+  </body>
+</html>
